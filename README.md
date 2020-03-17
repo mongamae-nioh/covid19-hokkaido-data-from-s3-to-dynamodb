@@ -41,6 +41,25 @@
 }
 ```
 
+# DynamoDBのアイテム説明
+|  項目名  |  データ  |
+| ---- | ---- |
+| contacts_subtotal | 新型コロナコールセンター相談件数(札幌市保健所値)(1日分)  |
+| discharges_subtotal | 治療終了者数(1日分) |
+| discharges_total | 治療終了者数(累計) |
+| id | DynamoDBのパーティションキー |
+| inspections_subtotal | 検査数累計(1日分) |
+| inspections_total | 検査数累計(累計) |
+| latest_patients_subtotal | 現在の患者数(治療終了者反映)(1日分) |
+| latest_patients_total | 現在の患者数(治療終了者反映)(合計) |
+| patients_residential | 陽性患者の居住地(リスト) |
+| patients_subtotal | 陽性患者数(1日分) |
+| patients_total | 陽性患者数(累計) |
+| querents_subtotal | 帰国者・接触者電話相談センター相談件数(札幌市保健所値)(1日分) |
+| update_date | データ更新日 |
+| update_time | データ更新時間 |
+
+
 # DynamoDBのレコード
 データの構造は以下のようになっている。
 これをAlexaのLambdaから参照して戻り値を発話する。
